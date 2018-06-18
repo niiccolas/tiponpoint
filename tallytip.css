@@ -1,0 +1,60 @@
+* {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#grandTotal {
+  font-size: 3em;
+}
+html {
+  background: gold;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+}
+#container {
+  background: white;
+  width: 40%;
+  margin: 20px auto;
+  padding: 5px 20px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.2)
+}
+#radio label {
+  display: block;
+}
+.input-group {
+  position: relative;
+  border-collapse: separate;
+}
+.screen-reader {
+ /* display: none; */
+ /* visibility: hidden; */
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0,0,0,0);
+ border: 0;
+}
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: table-cell;
+  height: 20px;
+  line-height: 20px;
+}
+
+.section-title {
+ margin-bottom: 0;
+ color: #555;
+ text-transform: uppercase;
+}
