@@ -1,0 +1,235 @@
+* {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 1px solid red; */
+}
+
+html {
+  background: gold;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  background: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+  width: 50%;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#container h1 {
+  margin: 0;
+}
+
+#form {
+  text-align: left;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#submit {
+  display: block;
+  margin-top: 10px;
+}
+
+.screen-reader {
+  /* display: none; */
+  /* visibility: hidden; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input,select {
+  /* background: red; */
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: 0;
+  border-bottom: 2px solid blue;
+  font-size: 1.5rem;
+  padding: 6px 10px;
+}
+
+select,option {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  /* padding: 30px; */
+  height: 50px;
+  background: white;
+  text-decoration: none;
+  border-bottom: 2px solid blue;
+  border-bottom-left-radius: 0px;
+}
+
+#submit {
+  margin-top: 2rem;
+  background: gold;
+  color: black;
+  border-radius: 1rem;
+  padding: 20px 0;
+  border: 0;
+  outline: none;
+  font-weight: 600;
+  transition: .4s background ease;
+}
+#submit:hover {
+  background: tomato;
+  transition: .4s all ease;
+  cursor: pointer;
+}
+#submit:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: table-cell;
+  height: 20px;
+  line-height: 20px;
+}
+
+.section-title {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #555;
+  text-transform: uppercase;
+}
+
+#grandTotal {
+  font-size: 3em;
+}
+
+#result {
+
+}
+
+/*
+* MODAL STYLING
+*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear .25s, opacity .25s 0s, transform .25s;
+  padding: 10px;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  max-width: 100%;
+  border-radius: .5rem;
+}
+
+.close-button {
+  float: right;
+  background-color: lightgray;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, .5);
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity .25s 0s, transform .25s;
+}
+
+/* PLUS MINUS INPUT STYLING */
+.plusminus-container {
+  max-width: 100%;
+  min-width: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 40px 40px;
+  grid-column-gap: 10px;
+  height: 40px;
+  line-height: 35px;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+.grid-item-number input {
+  border-bottom: 2px solid blue;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  margin: 0;
+  overflow: hidden;
+  padding: 6px 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.grid-item-plus {
+  color: blue;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 40px;
+  background: #f3f3f3;
+}
+.grid-item-plus:hover {
+  cursor: pointer;
+  background: gold;
+  transform: scale(1.1);
+  transition: transform .5s ease;
+}
+
+.grid-item-minus {
+  color: blue;
+  font-size: 1.5em;
+  line-height: 40px;
+  text-align: center;
+  background: #f3f3f3;
+}
+.grid-item-minus:hover {
+  background: gold;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform .5s ease;
+}
