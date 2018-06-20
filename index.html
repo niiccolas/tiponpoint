@@ -16,11 +16,10 @@
     <div id="form">
       <p class="section-title">Bill</p>
       <label for="bill" class="screen-reader">Amount </label>
-      <input type="text" name="" id="bill" placeholder="Amount" tabIndex="1" autocomplete="off" autofocus>
+      <input type="number" name="" id="bill" placeholder="Amount" tabindex="1" autocomplete="off" autofocus>
       <p class="section-title">Tip</p>
 
-      <select name="tip" id="tip" required tabIndex="2">
-        <!-- <option selected disabled value="">-- choose an option --</option> -->
+      <select name="tip" id="tip" required tabindex="2">
         <option value="outstanding">30% - Outstanding</option>
         <option value="good">20% - Good</option>
         <option value="okay">15% - It was okay</option>
@@ -28,11 +27,10 @@
       </select>
 
       <p class="section-title">SHARE BETWEEN</p>
-      <!-- <input type="number" name="sharing" id="sharing" step="1" min="1" value="1"> -->
       <div class="plusminus-container">
         <div class="grid-container">
           <div class="grid-item-number">
-            <input type="number" name="" id="sharing" value="1" class="counter" tabIndex="3">
+            <input type="number" name="" id="sharing" value="1" class="counter" tabindex="3">
           </div>
           <div class="grid-item-plus">+</div>
           <div class="grid-item-minus">–</div>
