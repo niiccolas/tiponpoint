@@ -1,13 +1,7 @@
-// js goes here
 const tipCalculator = (e) => {
-  //document.querySelector('h1').textContent = 'yo JavaScript'
-  let amount = document.querySelector('#bill').value
-
-  // tip level
-  let tip = document.querySelector('#tip').value
-
-  // number of people
-  let sharing = document.querySelector('#sharing').value
+  let amount = document.querySelector('#bill').value;
+  let tip = document.querySelector('#tip').value;
+  let sharing = document.querySelector('#sharing').value;
 
   if(!amount) {
     document.querySelector('#modal-message').textContent = 'How much was your bill?';
@@ -35,7 +29,7 @@ const tipCalculator = (e) => {
     default:
       break;
   }
-  const grandTotal = (amount * (tip)) / sharing
+  let grandTotal = (amount * (tip)) / sharing;
 
   document.querySelector('#grandTotal').textContent = grandTotal.toFixed(2);
   document.querySelector('#result').style.display = 'block';
@@ -48,11 +42,9 @@ document.querySelector('#submit').addEventListener('click', tipCalculator)
 function revealModal() {
   document.querySelector('.modal').classList.add('show-modal');
 }
-
 function hideModal() {
   document.querySelector('.modal').classList.remove('show-modal');
 }
-
 function hideModalOnEsc(event) {
   if (event.keyCode === 27) {
     hideModal();
@@ -60,17 +52,34 @@ function hideModalOnEsc(event) {
 }
 
 document.querySelector('.close-button, .modal').addEventListener('click', hideModal);
-// document.addEventListener('keydown', disableTab); //
 document.addEventListener('keyup', hideModalOnEsc); //
 
 
 // ! Input Increment Logic
-document.querySelector('.grid-item-plus').addEventListener('click', function(){
+document.querySelector('.grid-item-plus').addEventListener('click', function() {
   document.querySelector('.counter').value++;
 })
 
-document.querySelector('.grid-item-minus').addEventListener('click', function(){
-  if(document.querySelector('.counter').value >= 2){
+document.querySelector('.grid-item-minus').addEventListener('click', function() {
+  if(document.querySelector('.counter').value >= 2) {
       document.querySelector('.counter').value--;
      }
 });
+
+// RETURN key as TAB
+let inputs = document.querySelectorAll('input,select');
+inputs.forEach(a => a.addEventListener('keypress', returnKeyAsTab));
+
+function returnKeyAsTab(e) {
+  if (e.which === 13) {
+    e.preventDefault();
+    let nextInput = document.querySelectorAll(`[tabIndex="${this.tabIndex + 1}"]`);
+    // if no nextInput, go back to tabIndex 1
+    if (nextInput.length === 0) {
+      nextInput = document.querySelectorAll('[tabIndex="1"]');
+    }
+    tipCalculator();
+    nextInput[0].focus();
+  }
+}
+

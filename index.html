@@ -12,14 +12,14 @@
 
 <body>
   <div id="container">
+    <h1>TIP-ON-POINT 👌 </h1>
     <div id="form">
-      <h1>TIP-ON-POINT 👌 </h1>
       <p class="section-title">Bill</p>
       <label for="bill" class="screen-reader">Amount </label>
-      <input type="text" name="" id="bill" placeholder="Amount" class="">
+      <input type="text" name="" id="bill" placeholder="Amount" tabIndex="1" autocomplete="off" autofocus>
       <p class="section-title">Tip</p>
 
-      <select name="tip" id="tip" required>
+      <select name="tip" id="tip" required tabIndex="2">
         <!-- <option selected disabled value="">-- choose an option --</option> -->
         <option value="outstanding">30% - Outstanding</option>
         <option value="good">20% - Good</option>
@@ -32,7 +32,7 @@
       <div class="plusminus-container">
         <div class="grid-container">
           <div class="grid-item-number">
-            <input type="number" name="" id="sharing" value="1" class="counter">
+            <input type="number" name="" id="sharing" value="1" class="counter" tabIndex="3">
           </div>
           <div class="grid-item-plus">+</div>
           <div class="grid-item-minus">–</div>
