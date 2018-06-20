@@ -4,7 +4,7 @@ const tipCalculator = (e) => {
   let sharing = document.querySelector('#sharing').value;
 
   if(!amount) {
-    document.querySelector('#modal-message').textContent = 'How much was your bill?';
+    document.querySelector('#modal-message').textContent = 'Type the amount of your bill !';
     document.querySelector('.modal').classList.add('show-modal');
     throw 'ERROR: Missing amount'
   } else if (!tip) {
@@ -56,11 +56,11 @@ document.addEventListener('keyup', hideModalOnEsc); //
 
 
 // ! Input Increment Logic
-document.querySelector('.grid-item-plus').addEventListener('click', function() {
+document.querySelector('#plus').addEventListener('click', function() {
   document.querySelector('.counter').value++;
 })
 
-document.querySelector('.grid-item-minus').addEventListener('click', function() {
+document.querySelector('#minus').addEventListener('click', function() {
   if(document.querySelector('.counter').value >= 2) {
       document.querySelector('.counter').value--;
      }
