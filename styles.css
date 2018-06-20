@@ -65,9 +65,14 @@ input,select {
   padding: 6px 10px;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 select,option {
   -webkit-appearance: none;
-  -webkit-border-radius: 0px;
   border-radius: 0px;
   /* padding: 30px; */
   height: 50px;
