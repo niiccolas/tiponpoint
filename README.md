@@ -1,2 +1,3 @@
-# tiponpoint
-A snappy travel tip calculator
+# Tip On Point
+[A snappy tip calculator](https://niiccolas.github.io/tiponpoint/)
+
